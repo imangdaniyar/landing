@@ -4,7 +4,6 @@ body{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	background-color: #DFECE6;
 }
 .page-wrap{
 	width: 100%;
@@ -13,10 +12,21 @@ body{
 .wrap{
 	width: 100%;
     height: 100vh;
-	background-color: black;
 	position: relative;
 }
-
+/*------------------------PROGRESS BAR-------------------------------*/
+#container{
+	width: 100%;
+	position: fixed;
+	height: 2px;
+	top: 0;
+	z-index: 999;
+}
+#progress{
+	background: linear-gradient(90deg, white, #2D2D29);
+	width: 0%;
+	height: 2px;
+}
 /* ----------------------- HEADER ---------------------------------- */
 .header {
 	width: 100%;
@@ -32,12 +42,13 @@ body{
 }
 
 .container{
-	width: 100%;
+	width: 80%;
 	height: 100vh;
 	border:0.1vw solid silver;
-	min-height: 100vw;
-	margin:0 auto;
-	width: 80%;
+	min-height: 100vh;
+	position: absolute;
+	top: 0;
+	left:10%;
 }
 .button{
 	width: auto;
@@ -82,4 +93,44 @@ body{
 .poloska{
 	width: 30%;
 	margin: auto;
+}
+.order{
+	width: 20%;
+	text-align: center;
+	margin-top: 1vw;
+	background-color: #92C7A3;
+	padding: 2vw;
+	position: absolute;
+	right: 0;
+	border-radius: 5px;
+}
+.order-title{
+	color: #DFECE6;
+	font-size: 1.5vw
+}
+.info{
+	margin-top: 1vw;
+	padding: 0.5vw;	
+	border-radius: 5px;
+	border: 1px solid #DFECE6;
+	border-bottom: 2px solid #DFECE6;
+	border-right: 2px solid #DFECE6;
+}
+.info-btn {
+	background: #2D2D29;
+	color: white;
+	border: 1px solid #2D2D29;
+}
+.info-btn:hover {
+	transition: 1s;
+	background: #1e1e1c;
+}
+#wrap_2{
+	background: linear-gradient(45deg, #DFECE6, #92C7A3);
+}
+#wrap_3{
+	background: linear-gradient(45deg, #92C7A3, #3CA2A2);
+}
+#wrap_4{
+	background: linear-gradient(45deg, #3CA2A2, #215A6D);
 }
