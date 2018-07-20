@@ -9,6 +9,7 @@
 	<title>Landing</title>
 </head>
 <body>
+	
 		<div id="container">
 			<div id="progress">
 				
@@ -16,7 +17,10 @@
 		</div>
 	<div class="page-wrap">
 		<div class="wrap header">
-			<img src="images/web.jpg" alt="header" class="bg-image">
+			<div style="opacity: 0.5; background-color: lightgray;">
+			<video autoplay muted  id="myVideo" class="bg-image">
+  				<source src="head.mp4" type="video/mp4">
+			</video></div>
 			<div class="title">
 				<div class="hook">
 				В 90% малого бизнеса <br>
@@ -30,7 +34,8 @@
 <br>Ваш продающий сайт с уникальным дизайном 
 в топе Яндекс и Google через 7 дней</div>
 			</div>
-			<div class="button">ПОЛУЧИТЬ КЛИЕНТОВ</div>
+			<div class="button" onclick="$('#button').trigger('click');"  >ПОЛУЧИТЬ КЛИЕНТОВ</div>
+			<button id="button" onclick="cont()" style="display: none;">button</button>
 		</div>
 		<div class="wrap" id="wrap_2">
 			<div class="container">
@@ -63,5 +68,32 @@
 	<script src="js/jquery.scrollify.min.js"></script>	
 	<script src="js/jquery.easing.min.js"></script>
 	<script src="js/main.js"></script>
+	<script>
+	
+		var video = document.getElementById("myVideo");
+
+	setTimeout( function(){
+		video.pause();
+		
+	}, 2000);
+// Get the button
+var btn = document.getElementById('button');
+
+// Pause and play the video, and change the button text
+function cont() {
+
+    video.play();
+     $('#button').prop('disabled',true);
+    setTimeout(function(){
+    	
+    	alert('Здесь откроется модальное окно или что нибудь');
+    	
+    },3000);
+}
+
+	
+
+
+</script>
 </body>
 </html>
