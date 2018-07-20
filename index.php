@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Cormorant+Unicase|EB+Garamond|Lobster" rel="stylesheet">
 	<title>Landing</title>
 </head>
 <body>
@@ -14,24 +15,22 @@
 			</div>
 		</div>
 	<div class="page-wrap">
-		<div class="header">
+		<div class="wrap header">
 			<img src="images/web.jpg" alt="header" class="bg-image">
 			<div class="title">
 				<div class="hook">
-					В 90% малого бизнеса <br>
+				В 90% малого бизнеса <br>
 ключевая проблема - нехватка клиентов
 				</div>
 				<div class="poloska">
 					<hr>
 				</div> 
-				<div class="idea">ПОЛУЧАЙТЕ ДО 500 НОВЫХ ЗАКАЗОВ <br>
-КАЖДЫЙ МЕСЯЦ - НЕ ЗАТРАЧИВАЯ УСИЛИЙ</div>
-<br>
-				<div class="main-idea">Ваш продающий сайт с уникальным дизайном 
-					<br>
+				<div class="idea">Получайте до 500 новыз заказов 
+каждый месяц - не затрачивая усилий. 
+<br>Ваш продающий сайт с уникальным дизайном 
 в топе Яндекс и Google через 7 дней</div>
 			</div>
-			<div class="button">Получить клиентов</div>
+			<div class="button">ПОЛУЧИТЬ КЛИЕНТОВ</div>
 		</div>
 		<div class="wrap" id="wrap_2">
 			<div class="container">
@@ -61,6 +60,8 @@
 			</div>
 		</div>
 	</div>
-		
+	<script src="js/jquery.scrollify.min.js"></script>	
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
