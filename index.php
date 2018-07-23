@@ -1,3 +1,19 @@
+<?php
+require 'rb.php';	
+session_start();
+R::setup( 'mysql:host=127.0.0.1;dbname=landing','root', '' ); 
+ 
+if ( !R::testConnection() )
+{
+        exit ('Нет соединения с базой данных');
+} 
+	$data = $_POST;
+	$user = R::dispense('clients');
+	$user->name = $data['name'];
+	$user->sname = $data['sname'];
+	$user->phone = $data['phone'];
+	R::store($user);
+?>	
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +21,7 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery.js"></script>
+	<script src="js/main.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Cormorant+Unicase|EB+Garamond|Lobster" rel="stylesheet">
 	<title>Landing</title>
 </head>
@@ -50,16 +67,17 @@
 		<div class="wrap" id="wrap_4">
 			<div class="container">
 				<div class="order">
-					<form action="">
+
+					<form action="" method="POST">
 						<div class="order-title">
 						Заполните форму 
 						<br>
 						и получи сайт	
 						</div>
-						<input type="text" class="info" placeholder="Имя">
-						<input type="text" class="info" placeholder="Фамилия">
-						<input type="text" class="info" placeholder="Номер">
-						<input type="button" class="info info-btn" value="Оставить заявку" name="button">
+						<input type="text" class="info" placeholder="Имя" name="name">
+						<input type="text" class="info" placeholder="Фамилия" name="sname">
+						<input type="text" class="info" placeholder="Номер телефона" name="phone">
+						<button type="submit" class="info info-btn" name="button">Оставить заявку</button>
 					</form>
 				</div>
 			</div>
@@ -67,7 +85,7 @@
 	</div>
 	<script src="js/jquery.scrollify.min.js"></script>	
 	<script src="js/jquery.easing.min.js"></script>
-	<script src="js/main.js"></script>
+
 	<script>
 	
 		var video = document.getElementById("myVideo");
